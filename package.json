@@ -1,0 +1,47 @@
+{
+  "name": "jq-trim",
+  "version": "1.0.0",
+  "description": "A trim method that behaves like jquery.trim",
+  "main": "index.js",
+  "scripts": {
+    "beautify": "esbeautifier 'index.js' 'specs/**/*.js'",
+    "beautify-check": "esbeautifier -k 'index.js' 'specs/**/*.js'",
+    "eslint": "eslinter 'index.js' 'specs/**/*.js'",
+    "test": "mocha-runner 'specs/**/*.js'",
+    "cover": "istanbul cover -x 'specs/**/*.js' mocha-runner 'specs/**/*.js' html text-summary",
+    "watch": "watch-spawn -i -p 'specs/**/*.js' -p 'index.js' npm run cover",
+    "lint": "npm run beautify && npm run eslint && npm test",
+    "check": "npm run beautify-check && npm run eslint && npm test",
+    "install-hooks": "changelogx install-hook && prepush install",
+    "bump": "bumpery --verify='npm run check'",
+    "changelog": "changelogx -f markdown -o ./changelog.md",
+    "do-changelog": "npm run changelog && git add ./changelog.md && git commit -m 'DOC: Generate changelog'"
+  },
+  "keywords": [
+    "trim",
+    "jquery-trim",
+    "string trim"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/royriojas/jq-trim"
+  },
+  "license": "MIT",
+  "author": "Roy Riojas (http://royriojas.com)",
+  "prepush": [
+    "npm run check"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "bumpery": "^1.1.1",
+    "changelogx": "^1.0.15",
+    "esbeautifier": "^3.2.0",
+    "eslinter": "^2.0.6",
+    "istanbul": "^0.3.17",
+    "mocha-runner": "^1.0.8",
+    "prepush": "^2.0.4",
+    "proxyquire": "^1.6.0",
+    "read-file": "^0.2.0",
+    "watch-spawn": "^1.0.3"
+  }
+}

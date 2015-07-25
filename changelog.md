@@ -1,7 +1,7 @@
 
 # jq-trim - Changelog
-## HEAD
+## v0.1.0
 - **Features**
-  - first working version - [e5554b9]( https://github.com/royriojas/jq-trim/commit/e5554b9 ), [royriojas](https://github.com/royriojas), 25/07/2015 01:42:12
+  - first working version - [e586662]( https://github.com/royriojas/jq-trim/commit/e586662 ), [royriojas](https://github.com/royriojas), 25/07/2015 01:44:18
 
     

@@ -39,8 +39,10 @@ describe( 'jq-trim', function () {
 } );
 ```
 
-## Lincense
+## License
 
 [MIT](./LICENSE)
 
-## [Changelog](./changelog.md)
+## Changelog
+
+[Changelog](./changelog.md)
